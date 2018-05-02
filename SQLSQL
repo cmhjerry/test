@@ -1,0 +1,46 @@
+SELECT 列名称 FROM 表名称
+SELECT DISTINCT 列名称 FROM 表名称
+SELECT 列名称 FROM 表名称 WHERE 列 运算符 值
+SELECT 列名称 FROM 表名称 ORDER BY 列名称 DESC/ASC
+INSERT INTO 表名称(列名称1，列名称2….) VALUES (值1, 值2,....)
+UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值
+DELETE FROM 表名称 WHERE 列名称 = 值
+SELECT 列名称 FROM 表名称 LIMIT 数字
+SELECT TOP # * / Top n PERCENT FROM Persons
+SELECT 列名称 FROM 表名称 WHERE 列名称 IN (值1,值2,...)
+SELECT 列名称 FROM 表名称 AS 想起的名字
+SELECT 列名称 FROM 表1 UNION(All) SELECT 列名称 FROM 表2
+SELECT 列名称 INTO 新表名称 FROM 旧表名称
+CREATE DATABASE database_name
+CREATE (UNIQUE) INDEX 指数名称 ON 表名称 (列名称)
+CREATE TABLE 表名称 
+(
+列名称1 数据类型,
+列名称2 数据类型,
+列名称3 数据类型,
+....
+)
+￼
+
+ALTER 
+ALTER TABLE 表名称 ADD 列名称 数据格式
+ALTER TABLE 表名称 DROP COLUMN 列名称
+ALTER TABLE 表名称 ALTER COLUMN 列名称 数据格式
+
+处理Date
+
+
+JOIN
+1. SELECT 表1.列1, 表1.列2, 表2.列key FROM 表1, 表2 WHERE 表1.key = 表2.key
+2. SELECT 表1.列1, 表1.列2, 表2.列key FROM 表1 INNER JOIN 表2 ON 表1.key = 表2.key
+
+
+SELECT Like:
+SELECT 列名称 FROM 表名称 WHERE 列名称 LIKE 规律
+￼
+
+使用charlist
+从上面的 "Persons" 表中选取居住的城市以 "A" 或 "L" 或 "N" 开头的人    LIKE '[ALN]%'
+从上面的 "Persons" 表中选取居住的城市不以 "A" 或 "L" 或 "N" 开头的人：LIKE ‘[!ALN]%'
+
+
